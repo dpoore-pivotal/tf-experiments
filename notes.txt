@@ -1,0 +1,21 @@
+- generate training_data and training_labels:
+ data - some list of data about something (?)
+ labels - list of the thing you want to predict based on the data
+
+- generate test_data and test_labels (see above)
+
+- pad data to ensure equal lengths
+
+- set up model for training (most confusing part)
+
+- set aside some of the training_data for validation
+
+- set up an early stop callback to optimize
+
+- run training on model
+
+- check results for accuracy by evaluating trained model against test data
+
+- if model is doing ok, make some predictions based on input test data (here we could use a markov chain to generate something and use our model to predict if it's good or not)
+
+- save the model for doing more testing in the future
