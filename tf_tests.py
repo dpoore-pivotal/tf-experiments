@@ -35,8 +35,8 @@ train_dataset = train_dataset.map(pack_features_vector)
 features, labels = next(iter(train_dataset))
 
 model = tf.keras.Sequential([
-  tf.keras.layers.Dense(10, activation=tf.nn.relu, input_shape=(3,)),  # input shape required
-  tf.keras.layers.Dense(10, activation=tf.nn.relu),
+  tf.keras.layers.Dense(12, activation=tf.nn.relu, input_shape=(3,)),  # input shape required
+  tf.keras.layers.Dense(12, activation=tf.nn.relu),
   tf.keras.layers.Dense(3) # number of categories we want our output to map to
 ])
 
@@ -73,7 +73,7 @@ print("Step: {},         Loss: {}".format(global_step.numpy(),
 train_loss_results = []
 train_accuracy_results = []
 
-num_epochs = 501
+num_epochs = 1001
 
 for epoch in range(num_epochs):
   epoch_loss_avg = tfe.metrics.Mean()
